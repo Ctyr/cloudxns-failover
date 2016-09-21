@@ -88,19 +88,19 @@ def _default_proxy(value):
 
 
 def _DEFAULT2NJ():
-    value = 'nj.proxy@tyr.gift'
+    value = 'nj.myvpn@tyr.gift'
     return _default_proxy(value)
 
 def _DEFAULT2BJ():
-    value = 'bj.proxy@tyr.gift'
+    value = 'bj.myvpn@tyr.gift'
     return _default_proxy(value)
 
 def _nj_proxy(value):
 
-    record_id = ['1878281', '1878283', '1878285', '1878287']
-    domain_id   = 73295
-    host        = 'proxy'
-    ttl         = 80
+    record_id = ['123481', '12343', '14355', '5464']
+    domain_id   = 7543
+    host        = 'myvpn'
+    ttl         = 600
     type        = 'LINK'
 
     def _set(record_id, value):
@@ -132,16 +132,16 @@ def _nj_proxy(value):
         return False
 
 def _NJ2NJ():
-    value  = 'nj.proxy@tyr.gift'
+    value  = 'nj.myvpn@tyr.gift'
     return _nj_proxy(value)
 
 def _NJ2BJ():
-    value = 'bj.proxy@tyr.gift'
+    value = 'bj.myvpn@tyr.gift'
     return _nj_proxy(value)
 
 def bj_proxy_alive():
 
-    url  = 'http://bj.proxy.tyr.gift:25899'
+    url  = 'http://bj.myvpn.tyr.gift:8299'
     try:
         resp = urllib2.urlopen(url)
         resp = resp.read()
@@ -155,7 +155,7 @@ def bj_proxy_alive():
 
 def nj_proxy_alive():
 
-    url  = 'http://nj.proxy.tyr.gift:25899'
+    url  = 'http://nj.myvpn.tyr.gift:8288'
     try:
         resp = urllib2.urlopen(url)
         resp = resp.read()
@@ -168,20 +168,8 @@ def nj_proxy_alive():
         return False
 
 def sendmsg(msg):
-
-    to = 'conan1993ai'
-    url = 'http://xp2.im.baidu.com/ext/1.0/sendMsg'
-    token = '84feb2211bebb3036c235c2ccbbd0dfc'
-
-    data = {
-        'to':           to,
-        'access_token': token,
-        'msg_type':     'text',
-        'content':      msg
-    }
-
-    handler = urllib2.urlopen(urllib2.Request(url, urllib.urlencode(data)))
-    print handler.read()
+    
+    pass
 
 
 
