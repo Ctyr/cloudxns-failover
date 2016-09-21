@@ -6,8 +6,8 @@ import hashlib
 import requests
 import json
 
-API_KEY = '302b72821e80df67af54db4ee41dcc0b'
-SECRET_KEY = 'de5b60c07a66a59e'
+API_KEY = '1111111111111111111'
+SECRET_KEY = '22222222222'
 
 
 
@@ -40,7 +40,7 @@ def get_domain():
 
 def get_dns_entry():
 
-    domain_id = '73295'
+    domain_id = '333333'
     url = 'https://www.cloudxns.net/api2/record/%s?host_id=0' % domain_id
     body = ''
     req = urllib2.Request(url, headers=get_headers(url, body))
@@ -66,10 +66,10 @@ def alter_resolve(record_id, domain_id, host, value, ttl, type):
 
 def _default_proxy(value):
 
-    record_id   = '1388741'
-    domain_id   = 73295
-    host        = 'proxy'
-    ttl         = 80
+    record_id   = '5555555'
+    domain_id   = 7777
+    host        = 'myvpn'
+    ttl         = 600
     type        = 'LINK'
 
     try:
